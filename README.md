@@ -8,7 +8,7 @@ The stack comprises the following versions:
 
 * PHP
 * Nginx
-* MariaDB
+* MySQL
 
 ## ⚙️ Configuration
 

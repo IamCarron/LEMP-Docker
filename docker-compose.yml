@@ -1,7 +1,9 @@
 version: '3'
 services:
   web:
-    image: nginx:1.15.6
+    build: 
+      context: ./docker/web
+      dockerfile: Dockerfile  # Especificamos el nombre del Dockerfile a utilizar
     container_name: nginx
     ports:
       - "8000:80"

@@ -1,10 +1,10 @@
 # 🐳 Simple Login Page LEMP Docker stack 🛠️
 
-This repository holds a tiny `docker-compose` setup to initiate a `LEMP (Linux, Nginx, Mysql, PHP)` stack.
+This repository hosts a lightweight `docker-compose` configuration to launch a `LEMP (Linux, Nginx, MySQL, PHP)` stack.
 
 ## 📋 Details
 
-The stack incorporates the following versions:
+The stack comprises the following versions:
 
 * PHP
 * Nginx
@@ -12,19 +12,19 @@ The stack incorporates the following versions:
 
 ## ⚙️ Configuration
 
-Nginx configuration resides in `config/nginx/`.
+Nginx configuration files can be found under `config/nginx/`.
 
 ## 🚀 Usage
 
-To employ this stack, simply follow these steps:
+To utilize this stack, follow these steps:
 
 ##### Clone this repository.
 
-Clone it via: `git clone https://github.com/IamCarron/LEMP-Docker.git`.
+Clone it with: `git clone https://github.com/IamCarron/LEMP-Docker.git`.
 
 ##### Start the server.
 
-Initiate the server by executing the following command within the cloned directory: `docker-compose up`.
+Launch the server by executing the following command within the cloned directory: `docker-compose up`.
 
 ## 🛠️ Entering the containers
 
@@ -33,6 +33,10 @@ You can access a container using:
 `docker exec -ti {CONTAINER_NAME} /bin/bash`
 
 ## 🌐 Listing the networks
-You can list all the IPs usign:
+
+You can list all the IPs using:
 
 `docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)`
+
+Credits for the PHP login page go to the user [FaztWeb](https://github.com/FaztWeb) and their repository [php-login-simple](https://github.com/FaztWeb/php-login-simple). 🙌🎉
+Credits for the PHP login page go to the user [ProWebEngineer](https://github.com/ProWebEngineer) and their repository [docker-lemp](https://github.com/ProWebEngineer/docker-lemp). 🙌🎉

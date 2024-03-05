@@ -34,4 +34,5 @@ You can access a container using:
 
 ## 🌐 Listing the networks
 You can list all the IPs usign:
+
 `docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)`

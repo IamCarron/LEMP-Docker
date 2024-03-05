@@ -39,4 +39,4 @@ You can list all the IPs using:
 `docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)`
 
 Credits for the PHP login page go to the user [FaztWeb](https://github.com/FaztWeb) and their repository [php-login-simple](https://github.com/FaztWeb/php-login-simple). 🙌🎉
-Credits for the PHP login page go to the user [ProWebEngineer](https://github.com/ProWebEngineer) and their repository [docker-lemp](https://github.com/ProWebEngineer/docker-lemp). 🙌🎉
+Credits for the LAMP configuration go to the user [ProWebEngineer](https://github.com/ProWebEngineer) and their repository [docker-lemp](https://github.com/ProWebEngineer/docker-lemp). 🙌🎉

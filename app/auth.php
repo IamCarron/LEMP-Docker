@@ -12,7 +12,7 @@ if (!isset($_POST['submit'])) {
   exit;
 }
 
-$conn = mysqli_connect('mysql:3306', 'root', 'abc123.', 'sribuhost_login');
+$conn = mysqli_connect('mysql:3306', 'root', 'abc123.', 'login');
 $username = $_POST['username'];
 $password = $_POST['password'];
 

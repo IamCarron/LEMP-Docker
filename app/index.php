@@ -16,7 +16,7 @@ if (isset($_SESSION['name'])) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Form PHP MySQL With Session - Sribuhost</title>
+  <title>Login Form PHP MySQL With Session</title>
 
   <link rel="stylesheet" href="./style.css" />
 </head>
@@ -24,7 +24,7 @@ if (isset($_SESSION['name'])) {
 <body>
   <div class="container">
     <div class="box">
-      <h1 class="box__title">Sribuhost</h1>
+      <h1 class="box__title">Login</h1>
       <p class="box__subtitle">Please log in to continue</p>
       <?php if (isset($_SESSION['login_failed'])) : ?>
         <div class="alert">

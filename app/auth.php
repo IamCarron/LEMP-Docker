@@ -12,7 +12,7 @@ if (!isset($_POST['submit'])) {
   exit;
 }
 
-$conn = mysqli_connect('mysql:3306', 'root', 'abc123.', 'login');
+$conn = mysqli_connect('mysql:3306', 'root', 'abc123.', 'login_php');
 if (!$conn) {
     die("Error on the conection with the database: " . mysqli_connect_error());
 }

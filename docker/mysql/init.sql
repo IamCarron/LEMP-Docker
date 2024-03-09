@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- Insert an example user
-INSERT INTO users (username, password, email) VALUES ('example_user', 'password123', 'example@email.com');
+INSERT INTO users (username, password, email) VALUES ('admin', 'abc123', 'admin@lemp.com');
 
 -- Grant privileges to the user on the database
 GRANT SELECT, INSERT, UPDATE, DELETE ON login.* TO 'root'@'mysql' IDENTIFIED BY 'abc123.';

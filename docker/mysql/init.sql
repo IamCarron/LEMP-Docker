@@ -1,6 +1,6 @@
-CREATE DATABASE login;
+CREATE DATABASE login_php;
 
-USE login;
+USE login_php;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,

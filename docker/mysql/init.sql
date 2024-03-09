@@ -1,23 +1,21 @@
--- Create the database
-CREATE DATABASE IF NOT EXISTS login;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
--- Select the database
-USE login;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Create users table
-CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+INSERT INTO `users` (`id`, `username`, `password`, `name`) VALUES
+(1, 'sribuhost', 'pass123', 'Sribuhost');
 
--- Insert an example user
-INSERT INTO users (username, password, email) VALUES ('admin', 'abc123', 'admin@lemp.com');
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
--- Grant privileges to the user on the database
-GRANT SELECT, INSERT, UPDATE, DELETE ON login.* TO 'root'@'mysql' IDENTIFIED BY 'abc123.';
-
--- Refresh privileges
-FLUSH PRIVILEGES;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;

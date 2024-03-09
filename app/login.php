@@ -1,27 +1,27 @@
 <?php
 
-  session_start();
+session_start();
 
-  if (isset($_SESSION['user_id'])) {
+if (isset($_SESSION['user_id'])) {
     header('Location: /php-login');
-  }
-  require 'database.php';
+}
+require 'database.php';
 
-  if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
-    $records->bindParam(':email', $_POST['email']);
-    $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
+if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $sql = "SELECT id, email, password FROM users WHERE email = '$email' AND password = '$password'";
+    $results = $conn->query($sql);
 
     $message = '';
 
-    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-      $_SESSION['user_id'] = $results['id'];
-      header("Location: /php-login");
+    if ($results->rowCount() > 0) {
+        $_SESSION['user_id'] = $results->fetchColumn();
+        header("Location: /php-login");
     } else {
-      $message = 'Sorry, those credentials do not match';
+        $message = 'Sorry, those credentials do not match';
     }
-  }
+}
 
 ?>
 

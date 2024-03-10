@@ -10,8 +10,9 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `users` (`id`, `username`, `password`, `name`) VALUES
-(1, 'admin', 'abc123', 'Boss');
-
+(1, 'admin', 'abc123', 'Admin');
+INSERT INTO `users` (`id`, `username`, `password`, `name`) VALUES
+(2, 'user', 'abc123', 'User');
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
